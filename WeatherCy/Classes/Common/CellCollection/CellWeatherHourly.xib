@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CellWeatherHourly" customModule="WeatherCy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="91" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="91" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X7U-ST-5Ue">
+                        <rect key="frame" x="0.0" y="0.0" width="91" height="80"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfU-Dm-uAD" userLabel="labelHour">
+                                <rect key="frame" x="5" y="5" width="81" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIA-JN-aNE" userLabel="labelTemp">
+                                <rect key="frame" x="5" y="55" width="81" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="cloud.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hfj-lu-A6e" userLabel="imgICon">
+                                <rect key="frame" x="8" y="27.5" width="75" height="20"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="iIA-JN-aNE" secondAttribute="bottom" constant="8" id="1wf-7S-TZn"/>
+                            <constraint firstAttribute="trailing" secondItem="Hfj-lu-A6e" secondAttribute="trailing" constant="8" id="3gI-7G-Gi3"/>
+                            <constraint firstItem="iIA-JN-aNE" firstAttribute="leading" secondItem="X7U-ST-5Ue" secondAttribute="leading" constant="5" id="AsC-9r-l5B"/>
+                            <constraint firstAttribute="trailing" secondItem="iIA-JN-aNE" secondAttribute="trailing" constant="5" id="dQh-V3-f0F"/>
+                            <constraint firstItem="lfU-Dm-uAD" firstAttribute="top" secondItem="X7U-ST-5Ue" secondAttribute="top" constant="5" id="fbI-TG-PGm"/>
+                            <constraint firstAttribute="trailing" secondItem="lfU-Dm-uAD" secondAttribute="trailing" constant="5" id="iXd-j6-9V5"/>
+                            <constraint firstItem="Hfj-lu-A6e" firstAttribute="leading" secondItem="X7U-ST-5Ue" secondAttribute="leading" constant="8" id="izZ-u3-2cS"/>
+                            <constraint firstItem="Hfj-lu-A6e" firstAttribute="top" secondItem="lfU-Dm-uAD" secondAttribute="bottom" constant="5" id="neV-uv-Z1y"/>
+                            <constraint firstItem="lfU-Dm-uAD" firstAttribute="leading" secondItem="X7U-ST-5Ue" secondAttribute="leading" constant="5" id="rOx-K7-fqK"/>
+                            <constraint firstItem="iIA-JN-aNE" firstAttribute="top" secondItem="Hfj-lu-A6e" secondAttribute="bottom" constant="5" id="sVZ-a0-s4d"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="X7U-ST-5Ue" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="JNb-xT-J1i"/>
+                <constraint firstAttribute="top" secondItem="X7U-ST-5Ue" secondAttribute="top" id="Lhr-IA-4zs"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="X7U-ST-5Ue" secondAttribute="bottom" id="VHl-id-Whv"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="X7U-ST-5Ue" secondAttribute="trailing" id="ZYk-XL-WIW"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="91" height="129"/>
+            <connections>
+                <outlet property="imgIcon" destination="Hfj-lu-A6e" id="uvs-x2-HeC"/>
+                <outlet property="labelHour" destination="lfU-Dm-uAD" id="q6P-5k-l5o"/>
+                <outlet property="labelTemperature" destination="iIA-JN-aNE" id="JFo-Uf-GTX"/>
+            </connections>
+            <point key="canvasLocation" x="167.39130434782609" y="93.75"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cloud.fill" catalog="system" width="128" height="84"/>
+    </resources>
+</document>
